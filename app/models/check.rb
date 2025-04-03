@@ -10,7 +10,7 @@ class Check < ApplicationRecord
 
   before_save :attach_image
 
-  def image_data
+  def fetch_image
     return nil unless image.attached?
 
     {
