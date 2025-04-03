@@ -10,6 +10,15 @@ class Check < ApplicationRecord
 
   before_save :attach_image
 
+  def image_data
+    return nil unless image.attached?
+
+    {
+      base64: Base64.strict_encode64(image.download),
+      content_type: image.blob.content_type
+    }
+  end
+
   private
 
   def attach_image
