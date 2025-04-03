@@ -22,7 +22,7 @@ class Check < ApplicationRecord
   private
 
   def attach_image
-    return unless !image_data.nil? || image_data.include?(',')
+    return if image_data.blank? || !image_data.include?(',')
 
     decoded_image = Base64.decode64(image_data.split(',')[1])
     io = StringIO.new(decoded_image)
