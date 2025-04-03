@@ -1,0 +1,41 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+.bg_primary-color {
+  background-color: #ffffff;
+}
+.primary-color {
+  background-color: #ffffff;
+}
+.bg_secondary-color {
+  background-color: #293241;
+}
+.secondary-color {
+  color: #293241;
+}
+.custom-button.btn {
+  background-color: #293241;
+  color: #fff;
+  border: none;
+}
+.hero {
+  width: 100vw;
+  height: 50vh;
+}
+.hero img {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
+  width: 100%;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
+.custom_container {
+  max-width: 768px !important;
+  height: 690px !important;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+}
