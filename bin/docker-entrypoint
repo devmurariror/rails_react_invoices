@@ -10,8 +10,5 @@ fi
 if [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; then
   ./bin/rails db:prepare
 fi
-echo "Running database setup..."
-bundle exec rails db:migrate
-bundle exec rails db:seed
 
 exec "${@}"
