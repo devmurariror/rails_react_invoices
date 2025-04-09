@@ -59,8 +59,10 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
-
+RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile && \
+    bundle exec rake db:migrate && \
+    bundle exec rake assets:clean && \
+    bundle exec rails db:seed
 
 RUN rm -rf node_modules
 
