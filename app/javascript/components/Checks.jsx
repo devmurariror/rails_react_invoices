@@ -7,7 +7,7 @@ const Checks = () => {
   const [loading, setLoading] = useState(true); // Store loading state
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/checks")
+    fetch("https://rails-react-invoices-d6tf.onrender.com/api/v1/checks")
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "success" && Array.isArray(data.data)) {

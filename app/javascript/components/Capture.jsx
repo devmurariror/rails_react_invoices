@@ -16,7 +16,7 @@ const Capture = () => {
   const [companiesData, setCompaniesData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/companies")
+    fetch("https://rails-react-invoices-d6tf.onrender.com/api/v1/companies")
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "success" && Array.isArray(data.data)) {
@@ -65,7 +65,7 @@ const Capture = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/check_invoices",
+        "https://rails-react-invoices-d6tf.onrender.com/api/v1/check_invoices",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );

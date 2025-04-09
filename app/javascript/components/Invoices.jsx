@@ -4,7 +4,7 @@ const Invoices = () => {
   const [invoices, setInvoices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/invoices")
+    fetch("https://rails-react-invoices-d6tf.onrender.com/api/v1/invoices")
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "success" && Array.isArray(data.data)) {
